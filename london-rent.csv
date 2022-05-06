@@ -1,0 +1,333 @@
+Area,Year,Price
+City of London,2010,76.64
+Barking and Dagenham,2010,73.97
+Barnet,2010,83.17
+Brent,2010,88.35
+Camden,2010,85.64
+Croydon,2010,85.12
+Ealing,2010,82.02
+Enfield,2010,81.27
+Greenwich,2010,81.55
+Hackney,2010,79.31
+Hammersmith and Fulham,2010,86.42
+Haringey,2010,83.43
+Harrow,2010,86.60
+Havering,2010,69.73
+Hillingdon,2010,89.98
+Hounslow,2010,78.73
+Islington,2010,85.86
+Kensington and Chelsea,2010,90.86
+Kingston upon Thames,2010,90.14
+Lambeth,2010,85.18
+Lewisham,2010,77.01
+Newham,2010,74.29
+Redbridge,2010,83.79
+Southwark,2010,80.60
+Sutton,2010,81.31
+Tower Hamlets,2010,86.46
+Waltham Forest,2010,80.95
+Wandsworth,2010,104.64
+Westminster,2010,98.03
+City of London,2011,83.00
+Barking and Dagenham,2011,79.30
+Barnet,2011,95.75
+Brent,2011,95.08
+Camden,2011,91.54
+Croydon,2011,95.81
+Ealing,2011,86.14
+Enfield,2011,86.30
+Greenwich,2011,87.07
+Hackney,2011,88.83
+Hammersmith and Fulham,2011,92.19
+Haringey,2011,87.50
+Harrow,2011,95.70
+Havering,2011,75.03
+Hillingdon,2011,95.22
+Hounslow,2011,84.35
+Islington,2011,92.07
+Kensington and Chelsea,2011,96.99
+Kingston upon Thames,2011,96.62
+Lambeth,2011,98.18
+Lewisham,2011,81.67
+Newham,2011,98.24
+Redbridge,2011,89.25
+Southwark,2011,85.20
+Sutton,2011,87.20
+Tower Hamlets,2011,92.23
+Waltham Forest,2011,86.51
+Wandsworth,2011,112.49
+Westminster,2011,106.03
+City of London,2012,90.16
+Barking and Dagenham,2012,88.29
+Barnet,2012,98.27
+Brent,2012,104.52
+Camden,2012,103.96
+Croydon,2012,100.13
+Ealing,2012,92.89
+Enfield,2012,92.44
+Greenwich,2012,93.44
+Hackney,2012,91.23
+Hammersmith and Fulham,2012,92.60
+Haringey,2012,94.02
+Harrow,2012,102.08
+Havering,2012,81.23
+Hillingdon,2012,101.00
+Hounslow,2012,91.36
+Islington,2012,100.49
+Kensington and Chelsea,2012,120.33
+Kingston upon Thames,2012,104.12
+Lambeth,2012,98.12
+Lewisham,2012,87.38
+Newham,2012,95.31
+Redbridge,2012,98.72
+Southwark,2012,93.65
+Sutton,2012,94.51
+Tower Hamlets,2012,99.16
+Waltham Forest,2012,92.39
+Wandsworth,2012,120.85
+Westminster,2012,111.43
+City of London,2013,112.15
+Barking and Dagenham,2013,90.39
+Barnet,2013,98.29
+Brent,2013,112.81
+Camden,2013,103.96
+Croydon,2013,104.99
+Ealing,2013,92.45
+Enfield,2013,96.10
+Greenwich,2013,97.46
+Hackney,2013,95.00
+Hammersmith and Fulham,2013,99.31
+Haringey,2013,98.48
+Harrow,2013,107.06
+Havering,2013,86.79
+Hillingdon,2013,104.53
+Hounslow,2013,97.76
+Islington,2013,105.84
+Kensington and Chelsea,2013,111.66
+Kingston upon Thames,2013,107.00
+Lambeth,2013,102.12
+Lewisham,2013,95.91
+Newham,2013,101.00
+Redbridge,2013,102.82
+Southwark,2013,98.68
+Sutton,2013,99.41
+Tower Hamlets,2013,103.56
+Waltham Forest,2013,104.79
+Wandsworth,2013,130.83
+Westminster,2013,117.92
+City of London,2014,100.69
+Barking and Dagenham,2014,91.99
+Barnet,2014,101.05
+Brent,2014,114.53
+Camden,2014,109.79
+Croydon,2014,107.37
+Ealing,2014,95.19
+Enfield,2014,102.75
+Greenwich,2014,102.18
+Hackney,2014,99.41
+Hammersmith and Fulham,2014,106.29
+Haringey,2014,103.27
+Harrow,2014,112.50
+Havering,2014,90.64
+Hillingdon,2014,110.62
+Hounslow,2014,101.45
+Islington,2014,111.85
+Kensington and Chelsea,2014,118.56
+Kingston upon Thames,2014,114.95
+Lambeth,2014,107.06
+Lewisham,2014,98.45
+Newham,2014,97.92
+Redbridge,2014,105.11
+Southwark,2014,99.18
+Sutton,2014,108.82
+Tower Hamlets,2014,111.48
+Waltham Forest,2014,100.80
+Wandsworth,2014,125.85
+Westminster,2014,122.19
+City of London,2015,104.73
+Barking and Dagenham,2015,98.58
+Barnet,2015,103.36
+Brent,2015,113.62
+Camden,2015,114.72
+Croydon,2015,106.64
+Ealing,2015,97.45
+Enfield,2015,101.78
+Greenwich,2015,104.62
+Hackney,2015,102.57
+Hammersmith and Fulham,2015,109.44
+Haringey,2015,107.12
+Harrow,2015,114.99
+Havering,2015,90.64
+Hillingdon,2015,109.99
+Hounslow,2015,105.22
+Islington,2015,115.91
+Kensington and Chelsea,2015,123.91
+Kingston upon Thames,2015,116.94
+Lambeth,2015,110.18
+Lewisham,2015,98.12
+Newham,2015,100.84
+Redbridge,2015,104.70
+Southwark,2015,103.90
+Sutton,2015,108.86
+Tower Hamlets,2015,112.07
+Waltham Forest,2015,104.60
+Wandsworth,2015,128.45
+Westminster,2015,126.14
+City of London,2016,105.66
+Barking and Dagenham,2016,98.58
+Barnet,2016,102.92
+Brent,2016,112.71
+Camden,2016,113.57
+Croydon,2016,105.46
+Ealing,2016,96.47
+Enfield,2016,100.97
+Greenwich,2016,103.58
+Hackney,2016,101.55
+Hammersmith and Fulham,2016,108.34
+Haringey,2016,106.44
+Harrow,2016,113.80
+Havering,2016,98.23
+Hillingdon,2016,108.95
+Hounslow,2016,104.60
+Islington,2016,116.45
+Kensington and Chelsea,2016,123.06
+Kingston upon Thames,2016,116.42
+Lambeth,2016,108.06
+Lewisham,2016,96.34
+Newham,2016,103.39
+Redbridge,2016,105.59
+Southwark,2016,100.76
+Sutton,2016,107.74
+Tower Hamlets,2016,114.53
+Waltham Forest,2016,104.86
+Wandsworth,2016,128.85
+Westminster,2016,131.87
+City of London,2017,104.62
+Barking and Dagenham,2017,97.27
+Barnet,2017,102.75
+Brent,2017,113.66
+Camden,2017,113.03
+Croydon,2017,104.42
+Ealing,2017,95.81
+Enfield,2017,100.38
+Greenwich,2017,90.71
+Hackney,2017,100.55
+Hammersmith and Fulham,2017,107.94
+Haringey,2017,105.56
+Harrow,2017,113.08
+Havering,2017,98.15
+Hillingdon,2017,108.05
+Hounslow,2017,106.50
+Islington,2017,116.55
+Kensington and Chelsea,2017,122.15
+Kingston upon Thames,2017,116.13
+Lambeth,2017,107.73
+Lewisham,2017,95.53
+Newham,2017,99.69
+Redbridge,2017,104.76
+Southwark,2017,100.13
+Sutton,2017,107.06
+Tower Hamlets,2017,110.81
+Waltham Forest,2017,104.69
+Wandsworth,2017,128.14
+Westminster,2017,129.98
+City of London,2018,100.51
+Barking and Dagenham,2018,94.89
+Barnet,2018,102.52
+Brent,2018,113.25
+Camden,2018,112.59
+Croydon,2018,103.40
+Ealing,2018,95.83
+Enfield,2018,101.06
+Greenwich,2018,89.90
+Hackney,2018,99.97
+Hammersmith and Fulham,2018,107.48
+Haringey,2018,104.63
+Harrow,2018,112.13
+Havering,2018,98.15
+Hillingdon,2018,109.02
+Hounslow,2018,106.50
+Islington,2018,117.30
+Kensington and Chelsea,2018,121.14
+Kingston upon Thames,2018,113.24
+Lambeth,2018,106.93
+Lewisham,2018,94.63
+Newham,2018,99.17
+Redbridge,2018,105.26
+Southwark,2018,98.75
+Sutton,2018,107.49
+Tower Hamlets,2018,109.96
+Waltham Forest,2018,104.69
+Wandsworth,2018,126.35
+Westminster,2018,127.09
+City of London,2019,103.08
+Barking and Dagenham,2019,95.52
+Barnet,2019,101.37
+Brent,2019,112.66
+Camden,2019,111.48
+Croydon,2019,103.48
+Ealing,2019,95.46
+Enfield,2019,100.97
+Greenwich,2019,89.16
+Hackney,2019,98.28
+Hammersmith and Fulham,2019,104.02
+Haringey,2019,103.72
+Harrow,2019,112.26
+Havering,2019,96.50
+Hillingdon,2019,108.48
+Hounslow,2019,102.52
+Islington,2019,117.77
+Kensington and Chelsea,2019,119.99
+Kingston upon Thames,2019,112.82
+Lambeth,2019,107.25
+Lewisham,2019,94.82
+Merton,2019,85.50
+Newham,2019,101.98
+Redbridge,2019,104.85
+Southwark,2019,102.82
+Sutton,2019,108.13
+Tower Hamlets,2019,109.04
+Waltham Forest,2019,102.65
+Wandsworth,2019,126.51
+Westminster,2019,121.27
+City of London,2020,106.01
+Barking and Dagenham,2020,97.02
+Barnet,2020,104.61
+Brent,2020,118.17
+Camden,2020,113.68
+Croydon,2020,106.24
+Ealing,2020,98.34
+Enfield,2020,105.19
+Greenwich,2020,91.68
+Hackney,2020,101.58
+Hammersmith and Fulham,2020,106.87
+Haringey,2020,104.78
+Harrow,2020,115.53
+Havering,2020,100.53
+Hillingdon,2020,111.47
+Hounslow,2020,105.29
+Islington,2020,121.17
+Kensington and Chelsea,2020,123.25
+Kingston upon Thames,2020,113.96
+Lambeth,2020,109.88
+Lewisham,2020,99.19
+Merton,2020,100.92
+Newham,2020,104.64
+Redbridge,2020,108.80
+Southwark,2020,104.99
+Sutton,2020,112.24
+Tower Hamlets,2020,112.29
+Waltham Forest,2020,104.72
+Wandsworth,2020,129.17
+Westminster,2020,124.56
+London,2010,83.50
+London,2011,89.17
+London,2012,97.22
+London,2013,101.83
+London,2014,105.09
+London,2015,107.93
+London,2016,108.06
+London,2017,106.24
+London,2018,105.72
+London,2019,105.35
+London,2020,108.20
