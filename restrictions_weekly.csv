@@ -1,0 +1,300 @@
+week_start,restrictions,count
+2020-03-23,Schools Closure,1
+2020-03-30,Schools Closure,1
+2020-04-06,Schools Closure,1
+2020-04-13,Schools Closure,1
+2020-04-20,Schools Closure,1
+2020-04-27,Schools Closure,1
+2020-05-04,Schools Closure,1
+2020-05-11,Schools Closure,1
+2020-05-18,Schools Closure,1
+2020-05-25,Schools Closure,1
+2021-01-04,Schools Closure,1
+2021-01-11,Schools Closure,1
+2021-01-18,Schools Closure,1
+2021-01-25,Schools Closure,1
+2021-02-01,Schools Closure,1
+2021-02-08,Schools Closure,1
+2021-02-15,Schools Closure,1
+2021-02-22,Schools Closure,1
+2021-03-01,Schools Closure,1
+2020-03-16,Pub Closure,1
+2020-03-23,Pub Closure,1
+2020-03-30,Pub Closure,1
+2020-04-06,Pub Closure,1
+2020-04-13,Pub Closure,1
+2020-04-20,Pub Closure,1
+2020-04-27,Pub Closure,1
+2020-05-04,Pub Closure,1
+2020-05-11,Pub Closure,1
+2020-05-18,Pub Closure,1
+2020-05-25,Pub Closure,1
+2020-06-01,Pub Closure,1
+2020-06-08,Pub Closure,1
+2020-06-15,Pub Closure,1
+2020-06-22,Pub Closure,1
+2020-06-29,Pub Closure,1
+2020-11-02,Pub Closure,1
+2020-11-09,Pub Closure,1
+2020-11-16,Pub Closure,1
+2020-11-23,Pub Closure,1
+2020-11-30,Pub Closure,1
+2020-12-14,Pub Closure,1
+2020-12-21,Pub Closure,1
+2020-12-28,Pub Closure,1
+2021-01-04,Pub Closure,1
+2021-01-11,Pub Closure,1
+2021-01-18,Pub Closure,1
+2021-01-25,Pub Closure,1
+2021-02-01,Pub Closure,1
+2021-02-08,Pub Closure,1
+2021-02-15,Pub Closure,1
+2021-02-22,Pub Closure,1
+2021-03-01,Pub Closure,1
+2021-03-08,Pub Closure,1
+2021-03-15,Pub Closure,1
+2021-03-22,Pub Closure,1
+2021-03-29,Pub Closure,1
+2021-04-05,Pub Closure,1
+2020-03-23,Shop Closure,1
+2020-03-30,Shop Closure,1
+2020-04-06,Shop Closure,1
+2020-04-13,Shop Closure,1
+2020-04-20,Shop Closure,1
+2020-04-27,Shop Closure,1
+2020-05-04,Shop Closure,1
+2020-05-11,Shop Closure,1
+2020-05-18,Shop Closure,1
+2020-05-25,Shop Closure,1
+2020-06-01,Shop Closure,1
+2020-06-08,Shop Closure,1
+2020-11-02,Shop Closure,1
+2020-11-09,Shop Closure,1
+2020-11-16,Shop Closure,1
+2020-11-23,Shop Closure,1
+2020-11-30,Shop Closure,1
+2020-12-14,Shop Closure,1
+2020-12-21,Shop Closure,1
+2020-12-28,Shop Closure,1
+2021-01-04,Shop Closure,1
+2021-01-11,Shop Closure,1
+2021-01-18,Shop Closure,1
+2021-01-25,Shop Closure,1
+2021-02-01,Shop Closure,1
+2021-02-08,Shop Closure,1
+2021-02-15,Shop Closure,1
+2021-02-22,Shop Closure,1
+2021-03-01,Shop Closure,1
+2021-03-08,Shop Closure,1
+2021-03-15,Shop Closure,1
+2021-03-22,Shop Closure,1
+2021-03-29,Shop Closure,1
+2021-04-05,Shop Closure,1
+2020-03-16,Eat Place Closure,1
+2020-03-23,Eat Place Closure,1
+2020-03-30,Eat Place Closure,1
+2020-04-06,Eat Place Closure,1
+2020-04-13,Eat Place Closure,1
+2020-04-20,Eat Place Closure,1
+2020-04-27,Eat Place Closure,1
+2020-05-04,Eat Place Closure,1
+2020-05-11,Eat Place Closure,1
+2020-05-18,Eat Place Closure,1
+2020-05-25,Eat Place Closure,1
+2020-06-01,Eat Place Closure,1
+2020-06-08,Eat Place Closure,1
+2020-06-15,Eat Place Closure,1
+2020-06-22,Eat Place Closure,1
+2020-06-29,Eat Place Closure,1
+2020-11-02,Eat Place Closure,1
+2020-11-09,Eat Place Closure,1
+2020-11-16,Eat Place Closure,1
+2020-11-23,Eat Place Closure,1
+2020-11-30,Eat Place Closure,1
+2020-12-14,Eat Place Closure,1
+2020-12-21,Eat Place Closure,1
+2020-12-28,Eat Place Closure,1
+2021-01-04,Eat Place Closure,1
+2021-01-11,Eat Place Closure,1
+2021-01-18,Eat Place Closure,1
+2021-01-25,Eat Place Closure,1
+2021-02-01,Eat Place Closure,1
+2021-02-08,Eat Place Closure,1
+2021-02-15,Eat Place Closure,1
+2021-02-22,Eat Place Closure,1
+2021-03-01,Eat Place Closure,1
+2021-03-08,Eat Place Closure,1
+2021-03-15,Eat Place Closure,1
+2021-03-22,Eat Place Closure,1
+2021-03-29,Eat Place Closure,1
+2021-04-05,Eat Place Closure,1
+2020-03-23,Stay at Home,1
+2020-03-30,Stay at Home,1
+2020-04-06,Stay at Home,1
+2020-04-13,Stay at Home,1
+2020-04-20,Stay at Home,1
+2020-04-27,Stay at Home,1
+2020-05-04,Stay at Home,1
+2020-11-02,Stay at Home,1
+2020-11-09,Stay at Home,1
+2020-11-16,Stay at Home,1
+2020-11-23,Stay at Home,1
+2020-11-30,Stay at Home,1
+2020-12-14,Stay at Home,1
+2020-12-21,Stay at Home,1
+2020-12-28,Stay at Home,1
+2021-01-04,Stay at Home,1
+2021-01-11,Stay at Home,1
+2021-01-18,Stay at Home,1
+2021-01-25,Stay at Home,1
+2021-02-01,Stay at Home,1
+2021-02-08,Stay at Home,1
+2021-02-15,Stay at Home,1
+2021-02-22,Stay at Home,1
+2021-03-01,Stay at Home,1
+2021-03-08,Stay at Home,1
+2021-03-15,Stay at Home,1
+2021-03-22,Stay at Home,1
+2020-03-23,Household Mixing Indoors Restriction,1
+2020-03-30,Household Mixing Indoors Restriction,1
+2020-04-06,Household Mixing Indoors Restriction,1
+2020-04-13,Household Mixing Indoors Restriction,1
+2020-04-20,Household Mixing Indoors Restriction,1
+2020-04-27,Household Mixing Indoors Restriction,1
+2020-05-04,Household Mixing Indoors Restriction,1
+2020-05-11,Household Mixing Indoors Restriction,1
+2020-05-18,Household Mixing Indoors Restriction,1
+2020-05-25,Household Mixing Indoors Restriction,1
+2020-06-01,Household Mixing Indoors Restriction,1
+2020-06-08,Household Mixing Indoors Restriction,1
+2020-06-15,Household Mixing Indoors Restriction,1
+2020-06-22,Household Mixing Indoors Restriction,1
+2020-06-29,Household Mixing Indoors Restriction,1
+2020-10-12,Household Mixing Indoors Restriction,1
+2020-10-19,Household Mixing Indoors Restriction,1
+2020-10-26,Household Mixing Indoors Restriction,1
+2020-11-02,Household Mixing Indoors Restriction,1
+2020-11-09,Household Mixing Indoors Restriction,1
+2020-11-16,Household Mixing Indoors Restriction,1
+2020-11-23,Household Mixing Indoors Restriction,1
+2020-11-30,Household Mixing Indoors Restriction,1
+2020-12-07,Household Mixing Indoors Restriction,1
+2020-12-14,Household Mixing Indoors Restriction,1
+2020-12-21,Household Mixing Indoors Restriction,1
+2020-12-28,Household Mixing Indoors Restriction,1
+2021-01-04,Household Mixing Indoors Restriction,1
+2021-01-11,Household Mixing Indoors Restriction,1
+2021-01-18,Household Mixing Indoors Restriction,1
+2021-01-25,Household Mixing Indoors Restriction,1
+2021-02-01,Household Mixing Indoors Restriction,1
+2021-02-08,Household Mixing Indoors Restriction,1
+2021-02-15,Household Mixing Indoors Restriction,1
+2021-02-22,Household Mixing Indoors Restriction,1
+2021-03-01,Household Mixing Indoors Restriction,1
+2021-03-08,Household Mixing Indoors Restriction,1
+2021-03-15,Household Mixing Indoors Restriction,1
+2021-03-22,Household Mixing Indoors Restriction,1
+2021-03-29,Household Mixing Indoors Restriction,1
+2021-04-05,Household Mixing Indoors Restriction,1
+2021-04-12,Household Mixing Indoors Restriction,1
+2021-04-19,Household Mixing Indoors Restriction,1
+2021-04-26,Household Mixing Indoors Restriction,1
+2021-05-03,Household Mixing Indoors Restriction,1
+2021-05-10,Household Mixing Indoors Restriction,1
+2020-03-16,Work From Home Policy,1
+2020-03-23,Work From Home Policy,1
+2020-03-30,Work From Home Policy,1
+2020-04-06,Work From Home Policy,1
+2020-04-13,Work From Home Policy,1
+2020-04-20,Work From Home Policy,1
+2020-04-27,Work From Home Policy,1
+2020-05-04,Work From Home Policy,1
+2020-05-11,Work From Home Policy,1
+2020-05-18,Work From Home Policy,1
+2020-05-25,Work From Home Policy,1
+2020-06-01,Work From Home Policy,1
+2020-06-08,Work From Home Policy,1
+2020-06-15,Work From Home Policy,1
+2020-06-22,Work From Home Policy,1
+2020-06-29,Work From Home Policy,1
+2020-07-06,Work From Home Policy,1
+2020-07-13,Work From Home Policy,1
+2020-07-20,Work From Home Policy,1
+2020-07-27,Work From Home Policy,1
+2020-09-21,Work From Home Policy,1
+2020-09-28,Work From Home Policy,1
+2020-10-05,Work From Home Policy,1
+2020-10-12,Work From Home Policy,1
+2020-10-19,Work From Home Policy,1
+2020-10-26,Work From Home Policy,1
+2020-11-02,Work From Home Policy,1
+2020-11-09,Work From Home Policy,1
+2020-11-16,Work From Home Policy,1
+2020-11-23,Work From Home Policy,1
+2020-11-30,Work From Home Policy,1
+2020-12-07,Work From Home Policy,1
+2020-12-14,Work From Home Policy,1
+2020-12-21,Work From Home Policy,1
+2020-12-28,Work From Home Policy,1
+2021-01-04,Work From Home Policy,1
+2021-01-11,Work From Home Policy,1
+2021-01-18,Work From Home Policy,1
+2021-01-25,Work From Home Policy,1
+2021-02-01,Work From Home Policy,1
+2021-02-08,Work From Home Policy,1
+2021-02-15,Work From Home Policy,1
+2021-02-22,Work From Home Policy,1
+2021-03-01,Work From Home Policy,1
+2021-03-08,Work From Home Policy,1
+2021-03-15,Work From Home Policy,1
+2021-03-22,Work From Home Policy,1
+2021-03-29,Work From Home Policy,1
+2021-04-05,Work From Home Policy,1
+2021-04-12,Work From Home Policy,1
+2021-04-19,Work From Home Policy,1
+2021-04-26,Work From Home Policy,1
+2021-05-03,Work From Home Policy,1
+2021-05-10,Work From Home Policy,1
+2021-05-17,Work From Home Policy,1
+2021-05-24,Work From Home Policy,1
+2021-05-31,Work From Home Policy,1
+2021-06-07,Work From Home Policy,1
+2021-06-14,Work From Home Policy,1
+2021-06-21,Work From Home Policy,1
+2021-06-28,Work From Home Policy,1
+2021-07-05,Work From Home Policy,1
+2021-07-12,Work From Home Policy,1
+2021-12-13,Work From Home Policy,1
+2021-12-20,Work From Home Policy,1
+2021-12-27,Work From Home Policy,1
+2022-01-03,Work From Home Policy,1
+2022-01-10,Work From Home Policy,1
+2022-01-17,Work From Home Policy,1
+2020-09-14,Indoor Rule of 6,1
+2020-09-21,Indoor Rule of 6,1
+2020-09-28,Indoor Rule of 6,1
+2020-10-05,Indoor Rule of 6,1
+2020-10-12,Indoor Rule of 6,1
+2021-05-17,Indoor Rule of 6,1
+2021-05-24,Indoor Rule of 6,1
+2021-05-31,Indoor Rule of 6,1
+2021-06-07,Indoor Rule of 6,1
+2021-06-14,Indoor Rule of 6,1
+2021-06-21,Indoor Rule of 6,1
+2021-06-28,Indoor Rule of 6,1
+2021-07-05,Indoor Rule of 6,1
+2021-07-12,Indoor Rule of 6,1
+2020-09-21,Curfew,1
+2020-09-28,Curfew,1
+2020-10-05,Curfew,1
+2020-10-12,Curfew,1
+2020-10-19,Curfew,1
+2020-10-26,Curfew,1
+2020-11-02,Curfew,1
+2020-11-30,Curfew,1
+2020-12-07,Curfew,1
+2020-12-14,Curfew,1
+2020-08-03,Eat Out To Help Out,1
+2020-08-10,Eat Out To Help Out,1
+2020-08-17,Eat Out To Help Out,1
+2020-08-24,Eat Out To Help Out,1
