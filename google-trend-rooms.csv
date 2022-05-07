@@ -1,5 +1,5 @@
 Week,Flat_Type,trend,rate
-2019-01-06,Studio Flat,89,
+2019-01-06,Studio Flat,89,0.00000
 2019-01-13,Studio Flat,87,-0.02000
 2019-01-20,Studio Flat,93,0.06000
 2019-01-27,Studio Flat,92,-0.01000
@@ -173,7 +173,7 @@ Week,Flat_Type,trend,rate
 2022-04-17,Studio Flat,85,-0.01000
 2022-04-24,Studio Flat,85,0.00000
 2022-05-01,Studio Flat,80,-0.05000
-2019-01-06,One Bedroom Flat,53,
+2019-01-06,One Bedroom Flat,53,0.00000
 2019-01-13,One Bedroom Flat,61,0.08000
 2019-01-20,One Bedroom Flat,55,-0.06000
 2019-01-27,One Bedroom Flat,57,0.02000
@@ -347,7 +347,7 @@ Week,Flat_Type,trend,rate
 2022-04-17,One Bedroom Flat,54,0.08000
 2022-04-24,One Bedroom Flat,56,0.02000
 2022-05-01,One Bedroom Flat,47,-0.09000
-2019-01-06,En-suite,42,
+2019-01-06,En-suite,42,0.00000
 2019-01-13,En-suite,39,-0.03000
 2019-01-20,En-suite,36,-0.03000
 2019-01-27,En-suite,34,-0.02000
@@ -521,7 +521,7 @@ Week,Flat_Type,trend,rate
 2022-04-17,En-suite,42,0.00000
 2022-04-24,En-suite,49,0.07000
 2022-05-01,En-suite,44,-0.05000
-2019-01-06,Two Bedroom Flat,17,
+2019-01-06,Two Bedroom Flat,17,0.00000
 2019-01-13,Two Bedroom Flat,15,-0.02000
 2019-01-20,Two Bedroom Flat,15,0.00000
 2019-01-27,Two Bedroom Flat,16,0.01000
