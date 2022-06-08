@@ -1,0 +1,546 @@
+<!DOCTYPE html><html ns-role="label" ns-label-name="whoami" ns-label-kind="paired"><head>
+      <title>project</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js"></script>
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export" ns-role="label-child">
+      <div class="mume markdown-preview  " id="litvis">
+      <style>
+/* narrative schema: /Users/leungkaching/Documents/GitHub/inm402coursework2022-kleungkc/lectures/narrative-schemas/project.yml */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+legend {
+  font-size:0.9em; font-style: italic;
+}
+
+.questions fieldset {
+  background: #f3f3f3;
+}
+
+.questions {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.annotation {
+  font-size: 1.2em;
+  font-family: caveat, cursive !important;
+}
+
+.task fieldset {
+  background: #fffafa;
+  border-color: #a66;
+}
+
+.whoami {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+</style><style>@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v15/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v15/wlptgwvFAVdoq2_F94zlCfv0bz1WC-UR_LA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Old Standard TT';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oldstandardtt/v18/MwQubh3o1vLImiwAVvYawgcf2eVurQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pinyonscript/v16/6xKpdSJbL9-e9LuoeQiDRQR8aOI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWaA.ttf) format('truetype');
+}
+#litvis {
+  font-family: "Lexend", sans-serif;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: 1.45;
+}
+#litvis h1,
+#litvis h2,
+#litvis h3,
+#litvis h4,
+#litvis h5,
+#litvis h6 {
+  font-family: "Roboto Slab", serif;
+}
+#litvis blockquote {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
+  font-size: 12.1pt;
+  background-color: #f6f6f6;
+  margin-right: 2em;
+}
+#litvis blockquote h1,
+#litvis blockquote h2,
+#litvis blockquote h3,
+#litvis blockquote h4,
+#litvis blockquote h5,
+#litvis blockquote h6 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
+}
+#litvis code,
+#litvis pre {
+  background-color: rgba(255, 255, 255, 0);
+}
+#litvis li {
+  margin: 0.5em 0;
+}
+#litvis pre {
+  border: solid 1px #ccc;
+  border-radius: 8px;
+}
+#litvis div[data-role="litvisOutput"] > span {
+  font-family: iosevka, monospace;
+  font-weight: bold;
+  font-size: 17.6pt;
+  display: block;
+  margin-bottom: 0.75em;
+  border-style: none none none solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding-left: 0.5em;
+}
+#litvis input[type="radio"],
+#litvis input[type="checkbox"],
+#litvis input[type="select"],
+#litvis input[type="range"] {
+  margin-left: 1em;
+}
+#litvis input[type="range"] {
+  min-width: 120px;
+  max-width: 120px;
+}
+</style>
+<h1 class="mume-header" id="data-visualization-project-summary">Data Visualization Project Summary</h1>
+
+<p></p><div class="whoami" ns-role="label-child"><div class="annotation" ns-role="label-child">Please add your name and City email address here:</div><br>
+Ka Ching Karen Leung<br>
+<a href="mailto:karen.leung@city.ac.uk">karen.leung@city.ac.uk</a><br>
+</div><p></p>
+<div class="questions" ns-role="label-child"><span class="annotation" ns-role="label-child">What are the research questions that your data visualization will help you to answer?</span><fieldset ns-role="label-child"><legend ns-role="label-child">Research Questions</legend>
+<p><strong>During the covid-19 pandemic, Londoners moved out from London to other parts of the UK. As they no longer need to commute to central London every day, the working environment becomes mostly work from home or in hybrid mode.</strong></p>
+<p><strong>The big question is How do COVID-19 impact and change Londoner&apos;s Life?</strong></p>
+<p>Following questions were raised to investigate:</p>
+<ul>
+<li>How do people&#x2019;s lifestyles change?</li>
+<li>How does covid impact our daily routine?</li>
+<li>How many people left London?</li>
+<li>Do people move back to London during the post-pandemic period?</li>
+<li>How does rent change to cope with the loss of the population?</li>
+<li>Do the trend of renting changed?</li>
+</ul>
+</fieldset></div>
+<div class="visualization" ns-role="label-child"><h2 ns-role="label-child">1. The Visualization</h2><span class="annotation" ns-role="label-child">Insert your visualization here.</span>
+<p><strong>Visualisation 1 (V1) (Interactive)</strong>:<br>
+Timeline diagram shows the restrictions applied in England through out the COVID-19 Penedemic, Mar 2020 - Feb 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;height&quot;:400,&quot;width&quot;:700,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/restrictions_weekly.csv&quot;},&quot;params&quot;:[{&quot;name&quot;:&quot;myPaintbrush&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;on&quot;:&quot;mouseover&quot;,&quot;nearest&quot;:false}}],&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;week_start&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:true}},&quot;y&quot;:{&quot;field&quot;:&quot;restrictions&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;axis&quot;:null},&quot;tooltip&quot;:{&quot;field&quot;:&quot;restrictions&quot;},&quot;fillOpacity&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:1},&quot;value&quot;:0.75},&quot;color&quot;:{&quot;field&quot;:&quot;restrictions&quot;,&quot;legend&quot;:null,&quot;scale&quot;:{&quot;scheme&quot;:&quot;warmgreys&quot;},&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:&quot;rgb(230,110,90)&quot;},&quot;value&quot;:&quot;rgb(80,80,80)&quot;},&quot;size&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:600},&quot;value&quot;:250}},&quot;mark&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;filled&quot;:true}}</span></p></div><p><strong>Visualisation 2 (V2) (Interactive)</strong>:<br>
+Timeline diagram shows usage of TfL since April 2019, compare to the data a year ago, Apr 2020 - Feb 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:200,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/journey-tfl.csv&quot;},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Month&quot;,&quot;timeUnit&quot;:{&quot;unit&quot;:&quot;yearmonth&quot;},&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:true}},&quot;y&quot;:{&quot;field&quot;:&quot;Transportation&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:null},&quot;tooltip&quot;:[{&quot;field&quot;:&quot;Transportation&quot;},{&quot;field&quot;:&quot;Time&quot;},{&quot;field&quot;:&quot;Month&quot;,&quot;type&quot;:&quot;temporal&quot;}],&quot;size&quot;:{&quot;field&quot;:&quot;Time&quot;,&quot;legend&quot;:null,&quot;type&quot;:&quot;quantitative&quot;,&quot;scale&quot;:{&quot;zero&quot;:true,&quot;rangeMax&quot;:3000}},&quot;color&quot;:{&quot;field&quot;:&quot;Transportation&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;domain&quot;:[&quot;Bus&quot;,&quot;Underground&quot;,&quot;Other Rail Services&quot;],&quot;range&quot;:[&quot;hsl(359,78%,46%)&quot;,&quot;hsl(216,100%,27%)&quot;,&quot;hsl(216,14%,27%)&quot;]}}},&quot;params&quot;:[{&quot;name&quot;:&quot;myPaintbrush&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;interval&quot;,&quot;encodings&quot;:[&quot;x&quot;]},&quot;bind&quot;:&quot;scales&quot;}],&quot;mark&quot;:{&quot;type&quot;:&quot;circle&quot;,&quot;fillOpacity&quot;:0.3,&quot;filled&quot;:true}}</span></p></div><p><strong>Visualisation 3 (V3)</strong>:<br>
+Shows changes in numbers of paitents registed with a GP in London, in age group 20-29 and 30-39, Jan 2020 - Apr 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:100,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/gpdata.csv&quot;},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:false}},&quot;y&quot;:{&quot;field&quot;:&quot;Age&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:{&quot;grid&quot;:true,&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%&quot;,&quot;values&quot;:[0]}},&quot;tooltip&quot;:[{&quot;field&quot;:&quot;percentage&quot;,&quot;format&quot;:&quot;%&quot;},{&quot;field&quot;:&quot;Age&quot;},{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;format&quot;:&quot;%b%Y&quot;}],&quot;size&quot;:{&quot;field&quot;:&quot;percentage&quot;,&quot;legend&quot;:null,&quot;type&quot;:&quot;quantitative&quot;,&quot;scale&quot;:{&quot;zero&quot;:true,&quot;rangeMax&quot;:1000}},&quot;color&quot;:{&quot;field&quot;:&quot;Age&quot;,&quot;title&quot;:&quot;Age Group&quot;,&quot;scale&quot;:{&quot;scheme&quot;:&quot;cividis&quot;}}},&quot;mark&quot;:{&quot;type&quot;:&quot;square&quot;,&quot;line&quot;:[],&quot;fillOpacity&quot;:0.7,&quot;filled&quot;:true,&quot;interpolate&quot;:&quot;monotone&quot;}}</span></p></div><p><strong>Visualisation 4 (V4) (Interactive)</strong>: The private rent movement in England, Jan 2019 - Feb 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;height&quot;:500,&quot;width&quot;:700,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/london-private-rent-changes.csv&quot;},&quot;layer&quot;:[{&quot;data&quot;:{&quot;values&quot;:[{&quot;start&quot;:&quot;2020/03/26&quot;,&quot;end&quot;:&quot;2020/06/23&quot;,&quot;event&quot;:&quot;First Lockdown&quot;},{&quot;start&quot;:&quot;2020/10/31&quot;,&quot;end&quot;:&quot;2020/12/02&quot;,&quot;event&quot;:&quot;Second Lockdown&quot;},{&quot;start&quot;:&quot;2021/01/06&quot;,&quot;end&quot;:&quot;2021/03/31&quot;,&quot;event&quot;:&quot;Third Lockdown&quot;}]},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;start&quot;,&quot;type&quot;:&quot;temporal&quot;},&quot;x2&quot;:{&quot;field&quot;:&quot;end&quot;,&quot;type&quot;:&quot;temporal&quot;},&quot;color&quot;:{&quot;field&quot;:&quot;event&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;domain&quot;:[&quot;First Lockdown&quot;,&quot;Second Lockdown&quot;,&quot;Third Lockdown&quot;,&quot;London&quot;,&quot;England&quot;,&quot;North East&quot;,&quot;East&quot;,&quot;North West&quot;,&quot;Yorkshire &amp; the Humber&quot;,&quot;East Midlands&quot;,&quot;West Midlands&quot;,&quot;South East&quot;,&quot;South West&quot;],&quot;range&quot;:[&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0,100%,45%)&quot;,&quot;hsl(0, 0%, 0%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;]}}},&quot;mark&quot;:{&quot;type&quot;:&quot;rect&quot;,&quot;opacity&quot;:0.2}},{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:false,&quot;format&quot;:&quot;%b%Y&quot;}},&quot;y&quot;:{&quot;field&quot;:&quot;percentage&quot;,&quot;type&quot;:&quot;quantitative&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:true,&quot;format&quot;:&quot;%&quot;,&quot;values&quot;:[0]}},&quot;color&quot;:{&quot;field&quot;:&quot;area&quot;},&quot;tooltip&quot;:{&quot;field&quot;:&quot;area&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;interpolate&quot;:&quot;monotone&quot;,&quot;opacity&quot;:0.4,&quot;point&quot;:true}}]}</span></p></div><p><strong>Visualisation 5 (V5) (Interactive)</strong>: The rental trend of the UK, Jan 2019 - May 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:200,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/google-trend-rooms.csv&quot;},&quot;layer&quot;:[{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;}},&quot;y&quot;:{&quot;field&quot;:&quot;trend&quot;,&quot;type&quot;:&quot;quantitative&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:false}},&quot;color&quot;:{&quot;field&quot;:&quot;Flat_Type&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;scheme&quot;:&quot;plasma&quot;}}},&quot;layer&quot;:[{&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;interpolate&quot;:&quot;monotone&quot;}},{&quot;params&quot;:[{&quot;name&quot;:&quot;myScroll&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;interval&quot;,&quot;encodings&quot;:[&quot;x&quot;]},&quot;bind&quot;:&quot;scales&quot;},{&quot;name&quot;:&quot;label&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;nearest&quot;:true,&quot;on&quot;:&quot;mouseover&quot;,&quot;encodings&quot;:[&quot;x&quot;]}}],&quot;encoding&quot;:{&quot;opacity&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;label&quot;,&quot;empty&quot;:false,&quot;value&quot;:1},&quot;value&quot;:0}},&quot;mark&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;filled&quot;:true}}]},{&quot;transform&quot;:[{&quot;filter&quot;:{&quot;param&quot;:&quot;label&quot;,&quot;empty&quot;:false}}],&quot;layer&quot;:[{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;rule&quot;,&quot;color&quot;:&quot;grey&quot;}},{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;title&quot;:&quot;&quot;},&quot;y&quot;:{&quot;field&quot;:&quot;trend&quot;,&quot;type&quot;:&quot;quantitative&quot;},&quot;text&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;format&quot;:&quot;%b%y&quot;},&quot;color&quot;:{&quot;field&quot;:&quot;Flat_Type&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;align&quot;:&quot;left&quot;,&quot;dx&quot;:5,&quot;dy&quot;:-5}}]}]}</span></p></div></div>
+<div class="insights" ns-role="label-child"><h2 ns-role="label-child">2. Insights</h2><span class="annotation" ns-role="label-child">What has your visualization allowed you to discover about your data that help you answer your research questions? Identify a maximum of the <b ns-role="label-child">3</b> most important insights that result directly from your visualization.</span>
+<h2 class="mume-header" id="changes-in-lifestyles">Changes in lifestyles</h2>
+
+<p>Covid restrictions and policies were placed and enforced during the lockdowns; which include complete <strong>School</strong> closures, <strong>Pub</strong> closures (excluding pubs that serve food), <strong>Non-Essential Shop</strong> closures, <strong>Eating Places</strong> closures (including pubs that serve food), <strong>Stay at home</strong> order, <strong>household mixing</strong> indoors restricted, <strong>working from home</strong> encouraged, <strong>Indoor Rule of 6</strong>, <strong>10 pm curfew</strong> on hospitality and <strong>Eat Out to Help Out</strong> scheme.</p>
+<p>These restrictions and rules changes our lifestyles, people were unable to travel, to do exercise, hang out with friends and go to work on-site normally. And these rules and restrictions were enforced once in a while since the start of the pandemic, it is hard for us to recall exactly when and what rules were in force.</p>
+<p>By reading V1 and V2, the following question can be answered:</p>
+<ul>
+<li>How do people&#x2019;s lifestyles change?</li>
+<li>How does covid impact our daily routine?</li>
+</ul>
+<p>V1 shows different types of restrictions and shows when were they applied. Gives a full picture of how the pandemic changes our life, seeing how people&#x2019;s lives are being impacted by the lockdown and all the different restrictions. From V1, the void part without points shows the period of the restriction eased, the first ease in the summer of 2020 was seen on V1, then also noticed the five-day Christmas ease in December 2020. Then in 2021, we can see the roadmap of lifting the lockdown, from March 2021 school resumed, and then pubs, restaurants and non-essential shops were open again in April. In May 2021, seeing the restrictions swift from restricting Indoor Household mixing to relaxed to Indoor Rule of 6, which allowed a maximum of six-person from multiple households to meet indoors. Finally seeing all restrictions were no longer in force in August 2021. Now we only see guidance of work from home enforce again in December 2021 due to the raise of cases at the end of 2021.</p>
+<p>V2 shows the usage of TfL, including Bus, Underground and Overground, DLR, tram and TfL Rail in the group of other rail services from April 2019 to February 2022. The first &#x2153; of the graph shows the usage of TfL before the pandemic which gives readers a better sense of changes when compared to data in the pandemic. We see a significant drop in usage of TfL services in March 2020, where the restrictions apply, workers are working from home, most of the shops and restaurants are closed and students are not allowed to go to school. Then it slightly raises in the summer of 2020 when some of the lockdown restrictions were lifted. But very soon in the winter of 2020, we see a drop again, where the second wave of covid impacted the UK and the nation went into lockdown again. We then can see the number of usages go up slowly with the lockdown lifting roadmap applied from March 2021 to June 2021. The usage of TfL in the second half of 2021 is still not as high as in 2019, but we can see a similar pattern occurred in December 2021, where no lockdown restrictions or rules were enforced. We can see the same drop in December 2019. December is the month when workers have fewer working days and students have fewer school days because of the Christmas and new year holidays. The same drop pattern that appears in December 2021 means that life is once again normal like before COVID.</p>
+<h2 class="mume-header" id="population">Population</h2>
+
+<p>In V3 where we can discuss the following questions:</p>
+<ul>
+<li>How many people left London?</li>
+<li>Do people move back to London during the post-pandemic period?</li>
+</ul>
+<p>V3 shows changes in the number of people registered with a GP in London, aged 20-29 and 30-39. The data record the annual within-cohort change of GP registration in London. This also represents the change in population, since registration with a GP when moving to a new place is essential.</p>
+<p>In the age group of 20-29, we could see a drop in registered patients from September 2020 to May 2021. It then slowly raise in June 2021 and increased largely in August 2021. The reason behind it might be lockdown was eased and students and workers move back to London.<br>
+In the age group of 30-39, the population constantly increase when compared to the year before throughout the lockdown. But it increased slowly from September 2020 to May 2021, just not as much as usual.</p>
+<p>It also represents the sign of people leaving and moving away from London as seeing the overall number of patients drop. When the lockdown rules are eased, and life goes back to normal we see an increase in population in London for both age groups. So people do come back to London after the lockdowns and pandemic.</p>
+<h2 class="mume-header" id="housing">Housing</h2>
+
+<ul>
+<li>How does rent change to cope with the loss of the population?</li>
+<li>Trend of Renting changes?</li>
+</ul>
+<p>V4 shows the 12-month price change in private renting in London. London showed the rent slightly dropped during all the lockdown periods. Only London shows a drop in rent, while all the other parts of the UK see an increase in rent as well as the overall rent of England. Given the context, London is well-known for its expensive living expenses, rent was higher than in other parts of the UK. While people left London in the pandemic and people might not be able to afford expensive rent because of cuts in jobs. Landlords tend to not increase much rent or even decrease rent during the pandemic, to ensure the flat is rented out and the landlord would have their income. Since all the restrictions eased and seeing London&#x2019;s rent going up again in 2022.</p>
+<p>V5 shows the change in the trend of rental in the United Kingdom since January 2019 (compared to the earlier week), including options of En-suite, Studio Flat, One Bedroom Flat and Two Bedroom Flat.</p>
+<p>It is searching data that pulled off from Google trends. While the data for Two Bedroom Flat was distinctive from the other three, it remains low in trend and did not have the same movement as the other three types. I also notice there is a drop in December of 2019, 2020 and 2021, maybe because it is the end of the year as a holiday season and hard to arrange moving companies, so people are less likely to move. Also, there is a significant increase in August of 2019, 2020 and 2021, maybe it is because university students might be looking for places for the new school year.</p>
+<p>From the data, we see a drop in searching for accommodation in March 2020, when the nation first go into lockdown and people were staying indoors waiting for the lockdown to ease. In April and May of 2020, searches for En-suite, Studio Flat and One Bedroom Flat started to rise again, reaching a peak in June 2020. People might be considering moving to a new place or considering a bigger flat after being locked indoors for a few months. The peak is similar to January 2020, which is before the pandemic. And they reach another peak in August 2020 before the school start. Apart from the significant increase after the first lockdown, the trend was in a very similar pattern and resume to normal as lockdown restrictions are lifted up.</p>
+</div>
+<div class="designJustification" ns-role="label-child"><h2 ns-role="label-child">3. Design Justification</h2><span class="annotation" ns-role="label-child">Why have you designed your visualizations this way? Itemize up to <b ns-role="label-child">3</b> design choices providing a justification for each supported by literature or evidence of good practice.</span>
+<h2 class="mume-header" id="colour">Colour</h2>
+
+<p>The use of colour in the visualisation is dissociative, the differences in the visual variable prevent us from grouping marks together (MacEachren, 1994).</p>
+<p>The use of colour in V1 is to highlight what the user focusing on, so the default colour of <strong>warmgreys</strong> was chosen to give users a neutral feeling and also represent the desperation of lockdowns. Then use the red colour to highlight the restriction that the user hovers on. Points on V1 represent an event, a restriction that happens that week, which is a marker on the timeline giving users an overview of what happened.</p>
+<p>In V2 the use of colour represents TfL services, the symbolic colours were chosen; red for bus and blue for underground. And in V3 colour was used to identify the different age groups. In V2 and V3 the visual variable is quantitative that it representing numerical reading and it is obtainable from changes in shapes (MacEachren, 1994). In V2, different sizes of circles were used to represent the amount of usage. Using circles aligned next to each other and categorised in the type of transportation allow users to compare the changes in data easier. In V3, squares were used to represent the changes in population, while using shape is clearer to show the shrink in population and how it increases in 2022.</p>
+<p>In V4, three light red rectangular in the background shows the period of lockdowns. When users try to understand the relationship between rent changes in the private rental and lockdowns. The users would focus on the highlighted period and see the decrease in rent from the line graph. The colour on the line graph highlighted the main investigating area; London and compared the data to England. They were in red and black colour which stands out from the other lines which are in light grey that represent the other area in England. The data of other areas in England were included to show the overall movement of rent as a whole nation.</p>
+<p>In V5, the search trend of type of dwellings is relatively identical, and it is not showing related order in changes. So the spectrum of scheme &quot;plasma&quot; was chosen, as it can represent the four categories in distinct colours.</p>
+<h2 class="mume-header" id="interaction">Interaction</h2>
+
+<p>The interactions designed for the visualisations might fully or partly meet what Shneiderman (1996) suggested on visual information seeking: <strong>&#x201C;Overview first, zoom and filter, then details-on-demand.&#x201D;</strong>. As Munzner (2014) said &#x2018;The user may &apos;explore&apos; the dataset via interactions in the visualisation.&#x2019; Interactions encourage users to engage with the big set of data easily and gain an understanding of it easier.</p>
+<p>In V1, it gives an overview of lockdown restriction, then the grey dots will turn red when the mouse hovers onto the graph, it highlighted the selected information that users wanted to know and filters out uninteresting items. (Shneiderman, 1996) This is also considered as giving details on-demand, users select an item or group and get details when needed (Shneiderman, 1996). By using <strong>[maTooltip ttEncoding]</strong>, it shows the related detail of the data at that point, on V1 it shows what event occurs at that moment.</p>
+<p>In V2, it shows an overview of changes in data by the shapes, users can zoom in to the visualisation and see the changes closely. Filter and show details on-demand by hovering on top of the circle. It shows the details of the data such as type of transportation, period of time and usage.</p>
+<p>In V3, it gives users an overview of how the population changes are distributed along the timeline, and by hovering on hovering onto the squares it gives details of the data set. In V4, <strong>[maTooltip ttEncoding]</strong> was used to indicate the area of the specific line. In V5, when users could zoom in and see the detail of the data set. And when hovering over the visualisation, a line would appear and show the month and year of where the users are pointing at.</p>
+<h2 class="mume-header" id="layout">Layout</h2>
+
+<p>The layout of the visualisations is in landscape and users read horizontally from left to right seeing the changes and events that occurred. Also ideally, users can compare the graph vertically by temporal juxtaposition. Even though the visualisation graphs are not aligned on the same time scale, some are allowed to zoom in and adjust to match the previous visualisation. Unfortunately, the visualisations are not able to be compared by arranging them in temporal juxtaposition. This disappointment in layout would be mentioned and disscuss in the evaluation later on.</p>
+<p>In V4, superposition arrangement was used to show the relation between rent movements and the lockdown periods. Superposition places two or more representations &quot;on top&quot; of one another, allowing for a direct visual comparison inside the same graphical space. (Gleicher et al, 2011). By using layers, encoding lines and rect separately from two data sources, the visualisation was then made in a superposition arrangement, then the user would not need to find the date of the three lockdowns while understanding the changes in rent.</p>
+</div>
+<div class="validation" ns-role="label-child"><h2 ns-role="label-child">4. Validation </h2><span class="annotation" ns-role="label-child"> Itemize up to <b ns-role="label-child">3</b> evaluative statements of the strengths and weaknesses of your visualization supported by literature or evidence of good practice.</span>
+<h2 class="mume-header" id="data-insufficient">Data Insufficient</h2>
+
+<p>The topic of the pandemic is an ongoing issue, where not all aspects of the event have data that could be accessed or generated. While searching for data to show a decrease in population, demographic data from Office for National Statistics(ONS) is estimated projection data for the period of 2019-2022 and Census 2021 is not an appropriate source of data as it counts every 10 years and by the time of submission not available. So, in the search to show any possible changes in population, reading an article from the ONS guide me to search for GP registration data. Also, in the proposal, one of the research questions was to find out where the people moved to. No related data sets were found and it is related to personal privacy; open data would not include such data unless there&apos;s a large survey set up and people responded to it. So this research question was withdrawn.</p>
+<h2 class="mume-header" id="layout-1">Layout</h2>
+
+<p>To provide better readability of the data sets, the temporal juxtaposition was considered to arrange the visualisations. However, the data related to the pandemic were not fully available on the data store, and some of the useful data were not up to date. Limited data make the period covered on each topic different, some were unable to provide up to date data. It could probably be fixed by filtering and amending the raw data, and selecting and trimming the period. So then the visualisation could be shown in temporal juxtaposition arrangement. Providing better readability and understanding of the issue to users.</p>
+<h2 class="mume-header" id="improvements">Improvements</h2>
+
+<p>Overall, a certain period of time to investigate should be set, in order to arrange it in temporal juxtaposition. Also, a few light red rectangular can be added to the background indicating the lockdown periods, which could give a better overview of how the lockdown period related to the related topics.<br>
+<strong>V1</strong><br>
+In V1, I would suggest adding lines on top indicating the important moments, such as when and what the government announced, indicating the Christmas up-lifting and announcement of the lockdown lifting roadmap.<br>
+<strong>V3</strong><br>
+In V3, the comparison should include other age groups, maybe we can also see movement in other age groups. And even produce another visualisation, that shows the changes in other areas in England.<br>
+<strong>V4</strong><br>
+In V4, interactions of zooming in and selecting a specific line can be added to the visualisation. These interactions enable users to zoom in and filter the data that they are interested in.</p>
+</div>
+<div class="references" ns-role="label-child"><hr ns-role="label-child"><h3 ns-role="label-child">References</h3><span class="annotation" ns-role="label-child">Add references from literature that you have used to support your design justification.</span>
+<p><strong>Aigner W.</strong> (2011) Visualisation of Time-Oriented Data. Springer Verlag London pp. 152-153.</p>
+<p><strong>Gleicher, M., Albers, D., Walker, R., Jusufi, I., Hansen, C. and Roberts, J.</strong> (2011) <a href="https://go.exlibris.link/GRVzHyPn">Visual comparison for information visualization</a>. <em>Information Visualization</em> 10(4), pp.289-309.</p>
+<p><strong>MacEachren, A.</strong> (1994) Some Truth With Maps: A Primer on Symbolization and Design, Association of American Geographers, ISBN 0892912146</p>
+<p><strong>Munzner, T.</strong> (2014). Visualization analysis and design. AK Peters/CRC Press.</p>
+<p><strong>Shneiderman, B.</strong> (1996) The eyes have it: A task by data type taxonomy for information visualization, Proceedings of the IEEE Symposium on Visual Languages, pp.336-343.</p>
+<p><strong>Tobler, W.R.</strong> (1970) A Computer Movie Simulating Urban Growth in the Detroit Region. Economic Geography, Vol. 46, Supplement: Proceedings. International Geographical<br>
+Union. Commission on Quantitative Methods (Jun., 1970), pp. 234-240</p>
+<p><strong>Data Source:</strong><br>
+V1- ONS Covid Restrictions<br>
+<a href="https://data.london.gov.uk/dataset/covid-19-restrictions-timeseries">https://data.london.gov.uk/dataset/covid-19-restrictions-timeseries</a><br>
+V2- London Data Store<br>
+<a href="https://data.london.gov.uk/dataset/public-transport-journeys-type-transport">https://data.london.gov.uk/dataset/public-transport-journeys-type-transport</a><br>
+V3- London Data Store and NHS Digital<br>
+<a href="https://digital.nhs.uk/data-and-information/publications/statistical/patients-registered-at-a-gp-practice">https://digital.nhs.uk/data-and-information/publications/statistical/patients-registered-at-a-gp-practice</a><br>
+<a href="https://data.london.gov.uk/dataset/population-change-in-london-during-the-pandemic">https://data.london.gov.uk/dataset/population-change-in-london-during-the-pandemic</a><br>
+V4- ONS renting Index<br>
+<a href="https://data.london.gov.uk/dataset/index-private-housing-rental-prices-region">https://data.london.gov.uk/dataset/index-private-housing-rental-prices-region</a><br>
+V5- Google Trend<br>
+<a href="https://trends.google.com/trends/explore?date=2019-01-01%202022-05-07&amp;geo=GB&amp;q=studio%20flat,one%20bedroom%20flat,ensuite,two%20bedroom%20flat">https://trends.google.com/trends/explore?date=2019-01-01 2022-05-07&amp;geo=GB&amp;q=studio flat,one bedroom flat,ensuite,two bedroom flat</a></p>
+</div>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    <script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script>
+    
+    
+    
+  
+    </body></html>
