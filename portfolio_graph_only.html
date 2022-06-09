@@ -261,49 +261,113 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  " id="litvis">
-      <style>
-/* narrative schema: /Users/leungkaching/Documents/GitHub/inm402coursework2022-kleungkc/lectures/narrative-schemas/project.yml */
-fieldset {
-  border: 1px solid #ccc;
+      <style>@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v15/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v15/wlptgwvFAVdoq2_F94zlCfv0bz1WC-UR_LA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Old Standard TT';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oldstandardtt/v18/MwQubh3o1vLImiwAVvYawgcf2eVurQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pinyonscript/v16/6xKpdSJbL9-e9LuoeQiDRQR8aOI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWaA.ttf) format('truetype');
+}
+#litvis {
+  font-family: "Lexend", sans-serif;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: 1.45;
+}
+#litvis h1,
+#litvis h2,
+#litvis h3,
+#litvis h4,
+#litvis h5,
+#litvis h6 {
+  font-family: "Roboto Slab", serif;
+}
+#litvis blockquote {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
+  font-size: 12.1pt;
+  background-color: #f6f6f6;
+  margin-right: 2em;
+}
+#litvis blockquote h1,
+#litvis blockquote h2,
+#litvis blockquote h3,
+#litvis blockquote h4,
+#litvis blockquote h5,
+#litvis blockquote h6 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
+}
+#litvis code,
+#litvis pre {
+  background-color: rgba(255, 255, 255, 0);
+}
+#litvis li {
+  margin: 0.5em 0;
+}
+#litvis pre {
+  border: solid 1px #ccc;
   border-radius: 8px;
 }
-legend {
-  font-size:0.9em; font-style: italic;
-}
-
-.questions fieldset {
-  background: #f3f3f3;
-}
-
-.questions {
-  margin-top: 1em;
-  margin-bottom: 2em;
-}
-
-.annotation {
-  font-size: 1.2em;
-  font-family: caveat, cursive !important;
-}
-
-.task fieldset {
-  background: #fffafa;
-  border-color: #a66;
-}
-
-.whoami {
-  margin-top: 1em;
-  margin-bottom: 2em;
+#litvis div[data-role="litvisOutput"] > span {
+  font-family: iosevka, monospace;
   font-weight: bold;
+  font-size: 17.6pt;
+  display: block;
+  margin-bottom: 0.75em;
+  border-style: none none none solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding-left: 0.5em;
 }
-</style><p><strong>Visualisation 1 (V1) (Interactive)</strong>:<br>
+#litvis input[type="radio"],
+#litvis input[type="checkbox"],
+#litvis input[type="select"],
+#litvis input[type="range"] {
+  margin-left: 1em;
+}
+#litvis input[type="range"] {
+  min-width: 120px;
+  max-width: 120px;
+}
+</style>
+<p><strong>Visualisation 1 (V1) (Interactive)</strong>:<br>
 Timeline diagram shows the restrictions applied in England through out the COVID-19 Penedemic, Mar 2020 - Feb 2022.</p>
-<div data-role="litvisOutput" style="display: inline;"><span data-role="litvisOutputItem" data-context-name="default" data-expression="londonrestriction" data-interactive="true" data-output-format="v"><span style="background: rgba(255,200,200,0.1); min-height: 1em; min-width: 1em; display: inline-block;" title="v=londonrestriction: Code execution in context default was not successful"><span style="opacity: 0.8; display: inline-block; filter: sepia(0.7) hue-rotate(-50deg);"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;height&quot;:400,&quot;width&quot;:700,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/restrictions_weekly.csv&quot;},&quot;params&quot;:[{&quot;name&quot;:&quot;myPaintbrush&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;on&quot;:&quot;mouseover&quot;,&quot;nearest&quot;:false}}],&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;week_start&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:true}},&quot;y&quot;:{&quot;field&quot;:&quot;restrictions&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;axis&quot;:null},&quot;tooltip&quot;:{&quot;field&quot;:&quot;restrictions&quot;},&quot;fillOpacity&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:1},&quot;value&quot;:0.75},&quot;color&quot;:{&quot;field&quot;:&quot;restrictions&quot;,&quot;legend&quot;:null,&quot;scale&quot;:{&quot;scheme&quot;:&quot;warmgreys&quot;},&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:&quot;rgb(230,110,90)&quot;},&quot;value&quot;:&quot;rgb(80,80,80)&quot;},&quot;size&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:600},&quot;value&quot;:250}},&quot;mark&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;filled&quot;:true}}</span></p></span></span></span></div><p><strong>Visualisation 2 (V2) (Interactive)</strong>:<br>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;height&quot;:400,&quot;width&quot;:700,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/restrictions_weekly.csv&quot;},&quot;params&quot;:[{&quot;name&quot;:&quot;myPaintbrush&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;on&quot;:&quot;mouseover&quot;,&quot;nearest&quot;:false}}],&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;week_start&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:true}},&quot;y&quot;:{&quot;field&quot;:&quot;restrictions&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;axis&quot;:null},&quot;tooltip&quot;:{&quot;field&quot;:&quot;restrictions&quot;},&quot;fillOpacity&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:1},&quot;value&quot;:0.75},&quot;color&quot;:{&quot;field&quot;:&quot;restrictions&quot;,&quot;legend&quot;:null,&quot;scale&quot;:{&quot;scheme&quot;:&quot;warmgreys&quot;},&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:&quot;rgb(230,110,90)&quot;},&quot;value&quot;:&quot;rgb(80,80,80)&quot;},&quot;size&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;myPaintbrush&quot;,&quot;empty&quot;:false,&quot;value&quot;:600},&quot;value&quot;:250}},&quot;mark&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;filled&quot;:true}}</span></p></div><p><strong>Visualisation 2 (V2) (Interactive)</strong>:<br>
 Timeline diagram shows usage of TfL since April 2019, compare to the data a year ago, Apr 2020 - Feb 2022.</p>
-<div data-role="litvisOutput" style="display: inline;"><span data-role="litvisOutputItem" data-context-name="default" data-expression="londonjourney" data-interactive="true" data-output-format="v"><span style="background: rgba(255,200,200,0.1); min-height: 1em; min-width: 1em; display: inline-block;" title="v=londonjourney: Code execution in context default was not successful"><span style="opacity: 0.8; display: inline-block; filter: sepia(0.7) hue-rotate(-50deg);"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:200,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/journey-tfl.csv&quot;},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Month&quot;,&quot;timeUnit&quot;:{&quot;unit&quot;:&quot;yearmonth&quot;},&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:true}},&quot;y&quot;:{&quot;field&quot;:&quot;Transportation&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:null},&quot;tooltip&quot;:[{&quot;field&quot;:&quot;Transportation&quot;},{&quot;field&quot;:&quot;Time&quot;},{&quot;field&quot;:&quot;Month&quot;,&quot;type&quot;:&quot;temporal&quot;}],&quot;size&quot;:{&quot;field&quot;:&quot;Time&quot;,&quot;legend&quot;:null,&quot;type&quot;:&quot;quantitative&quot;,&quot;scale&quot;:{&quot;zero&quot;:true,&quot;rangeMax&quot;:3000}},&quot;color&quot;:{&quot;field&quot;:&quot;Transportation&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;domain&quot;:[&quot;Bus&quot;,&quot;Underground&quot;,&quot;Other Rail Services&quot;],&quot;range&quot;:[&quot;hsl(359,78%,46%)&quot;,&quot;hsl(216,100%,27%)&quot;,&quot;hsl(216,14%,27%)&quot;]}}},&quot;params&quot;:[{&quot;name&quot;:&quot;myPaintbrush&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;interval&quot;,&quot;encodings&quot;:[&quot;x&quot;]},&quot;bind&quot;:&quot;scales&quot;}],&quot;mark&quot;:{&quot;type&quot;:&quot;circle&quot;,&quot;fillOpacity&quot;:0.3,&quot;filled&quot;:true}}</span></p></span></span></span></div><p><strong>Visualisation 3 (V3)</strong>:<br>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:200,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/journey-tfl.csv&quot;},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Month&quot;,&quot;timeUnit&quot;:{&quot;unit&quot;:&quot;yearmonth&quot;},&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:true}},&quot;y&quot;:{&quot;field&quot;:&quot;Transportation&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:null},&quot;tooltip&quot;:[{&quot;field&quot;:&quot;Transportation&quot;},{&quot;field&quot;:&quot;Time&quot;},{&quot;field&quot;:&quot;Month&quot;,&quot;type&quot;:&quot;temporal&quot;}],&quot;size&quot;:{&quot;field&quot;:&quot;Time&quot;,&quot;legend&quot;:null,&quot;type&quot;:&quot;quantitative&quot;,&quot;scale&quot;:{&quot;zero&quot;:true,&quot;rangeMax&quot;:3000}},&quot;color&quot;:{&quot;field&quot;:&quot;Transportation&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;domain&quot;:[&quot;Bus&quot;,&quot;Underground&quot;,&quot;Other Rail Services&quot;],&quot;range&quot;:[&quot;hsl(359,78%,46%)&quot;,&quot;hsl(216,100%,27%)&quot;,&quot;hsl(216,14%,27%)&quot;]}}},&quot;params&quot;:[{&quot;name&quot;:&quot;myPaintbrush&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;interval&quot;,&quot;encodings&quot;:[&quot;x&quot;]},&quot;bind&quot;:&quot;scales&quot;}],&quot;mark&quot;:{&quot;type&quot;:&quot;circle&quot;,&quot;fillOpacity&quot;:0.3,&quot;filled&quot;:true}}</span></p></div><p><strong>Visualisation 3 (V3)</strong>:<br>
 Shows changes in numbers of paitents registed with a GP in London, in age group 20-29 and 30-39, Jan 2020 - Apr 2022.</p>
-<div data-role="litvisOutput" style="display: inline;"><span data-role="litvisOutputItem" data-context-name="default" data-expression="gpregister" data-interactive="true" data-output-format="v"><span style="background: rgba(255,200,200,0.1); min-height: 1em; min-width: 1em; display: inline-block;" title="v=gpregister: Code execution in context default was not successful"><span style="opacity: 0.8; display: inline-block; filter: sepia(0.7) hue-rotate(-50deg);"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:100,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/gpdata.csv&quot;},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:false}},&quot;y&quot;:{&quot;field&quot;:&quot;Age&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:{&quot;grid&quot;:true,&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%&quot;,&quot;values&quot;:[0]}},&quot;tooltip&quot;:[{&quot;field&quot;:&quot;percentage&quot;,&quot;format&quot;:&quot;%&quot;},{&quot;field&quot;:&quot;Age&quot;},{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;format&quot;:&quot;%b%Y&quot;}],&quot;size&quot;:{&quot;field&quot;:&quot;percentage&quot;,&quot;legend&quot;:null,&quot;type&quot;:&quot;quantitative&quot;,&quot;scale&quot;:{&quot;zero&quot;:true,&quot;rangeMax&quot;:1000}},&quot;color&quot;:{&quot;field&quot;:&quot;Age&quot;,&quot;title&quot;:&quot;Age Group&quot;,&quot;scale&quot;:{&quot;scheme&quot;:&quot;cividis&quot;}}},&quot;mark&quot;:{&quot;type&quot;:&quot;square&quot;,&quot;line&quot;:[],&quot;fillOpacity&quot;:0.7,&quot;filled&quot;:true,&quot;interpolate&quot;:&quot;monotone&quot;}}</span></p></span></span></span></div><p><strong>Visualisation 4 (V4) (Interactive)</strong>: The private rent movement in England, Jan 2019 - Feb 2022.</p>
-<div data-role="litvisOutput" style="display: inline;"><span data-role="litvisOutputItem" data-context-name="default" data-expression="lodonRentChanges" data-interactive="true" data-output-format="v"><span style="background: rgba(255,200,200,0.1); min-height: 1em; min-width: 1em; display: inline-block;" title="v=lodonRentChanges: Code execution in context default was not successful"><span style="opacity: 0.8; display: inline-block; filter: sepia(0.7) hue-rotate(-50deg);"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;height&quot;:500,&quot;width&quot;:700,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/london-private-rent-changes.csv&quot;},&quot;layer&quot;:[{&quot;data&quot;:{&quot;values&quot;:[{&quot;start&quot;:&quot;2020/03/26&quot;,&quot;end&quot;:&quot;2020/06/23&quot;,&quot;event&quot;:&quot;First Lockdown&quot;},{&quot;start&quot;:&quot;2020/10/31&quot;,&quot;end&quot;:&quot;2020/12/02&quot;,&quot;event&quot;:&quot;Second Lockdown&quot;},{&quot;start&quot;:&quot;2021/01/06&quot;,&quot;end&quot;:&quot;2021/03/31&quot;,&quot;event&quot;:&quot;Third Lockdown&quot;}]},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;start&quot;,&quot;type&quot;:&quot;temporal&quot;},&quot;x2&quot;:{&quot;field&quot;:&quot;end&quot;,&quot;type&quot;:&quot;temporal&quot;},&quot;color&quot;:{&quot;field&quot;:&quot;event&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;domain&quot;:[&quot;First Lockdown&quot;,&quot;Second Lockdown&quot;,&quot;Third Lockdown&quot;,&quot;London&quot;,&quot;England&quot;,&quot;North East&quot;,&quot;East&quot;,&quot;North West&quot;,&quot;Yorkshire &amp; the Humber&quot;,&quot;East Midlands&quot;,&quot;West Midlands&quot;,&quot;South East&quot;,&quot;South West&quot;],&quot;range&quot;:[&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0,100%,45%)&quot;,&quot;hsl(0, 0%, 0%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;]}}},&quot;mark&quot;:{&quot;type&quot;:&quot;rect&quot;,&quot;opacity&quot;:0.2}},{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:false,&quot;format&quot;:&quot;%b%Y&quot;}},&quot;y&quot;:{&quot;field&quot;:&quot;percentage&quot;,&quot;type&quot;:&quot;quantitative&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:true,&quot;format&quot;:&quot;%&quot;,&quot;values&quot;:[0]}},&quot;color&quot;:{&quot;field&quot;:&quot;area&quot;},&quot;tooltip&quot;:{&quot;field&quot;:&quot;area&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;interpolate&quot;:&quot;monotone&quot;,&quot;opacity&quot;:0.4,&quot;point&quot;:true}}]}</span></p></span></span></span></div><p><strong>Visualisation 5 (V5) (Interactive)</strong>: The rental trend of the UK, Jan 2019 - May 2022.</p>
-<div data-role="litvisOutput" style="display: inline;"><span data-role="litvisOutputItem" data-context-name="default" data-expression="dynamicAnnotation" data-interactive="true" data-output-format="v"><span style="background: rgba(255,200,200,0.1); min-height: 1em; min-width: 1em; display: inline-block;" title="v=dynamicAnnotation: Code execution in context default was not successful"><span style="opacity: 0.8; display: inline-block; filter: sepia(0.7) hue-rotate(-50deg);"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:200,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/google-trend-rooms.csv&quot;},&quot;layer&quot;:[{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;}},&quot;y&quot;:{&quot;field&quot;:&quot;trend&quot;,&quot;type&quot;:&quot;quantitative&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:false}},&quot;color&quot;:{&quot;field&quot;:&quot;Flat_Type&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;scheme&quot;:&quot;plasma&quot;}}},&quot;layer&quot;:[{&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;interpolate&quot;:&quot;monotone&quot;}},{&quot;params&quot;:[{&quot;name&quot;:&quot;myScroll&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;interval&quot;,&quot;encodings&quot;:[&quot;x&quot;]},&quot;bind&quot;:&quot;scales&quot;},{&quot;name&quot;:&quot;label&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;nearest&quot;:true,&quot;on&quot;:&quot;mouseover&quot;,&quot;encodings&quot;:[&quot;x&quot;]}}],&quot;encoding&quot;:{&quot;opacity&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;label&quot;,&quot;empty&quot;:false,&quot;value&quot;:1},&quot;value&quot;:0}},&quot;mark&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;filled&quot;:true}}]},{&quot;transform&quot;:[{&quot;filter&quot;:{&quot;param&quot;:&quot;label&quot;,&quot;empty&quot;:false}}],&quot;layer&quot;:[{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;rule&quot;,&quot;color&quot;:&quot;grey&quot;}},{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;title&quot;:&quot;&quot;},&quot;y&quot;:{&quot;field&quot;:&quot;trend&quot;,&quot;type&quot;:&quot;quantitative&quot;},&quot;text&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;format&quot;:&quot;%b%y&quot;},&quot;color&quot;:{&quot;field&quot;:&quot;Flat_Type&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;align&quot;:&quot;left&quot;,&quot;dx&quot;:5,&quot;dy&quot;:-5}}]}]}</span></p></span></span></span></div>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:100,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/gpdata.csv&quot;},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;,&quot;grid&quot;:false}},&quot;y&quot;:{&quot;field&quot;:&quot;Age&quot;,&quot;type&quot;:&quot;nominal&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:{&quot;grid&quot;:true,&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%&quot;,&quot;values&quot;:[0]}},&quot;tooltip&quot;:[{&quot;field&quot;:&quot;percentage&quot;,&quot;format&quot;:&quot;%&quot;},{&quot;field&quot;:&quot;Age&quot;},{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;format&quot;:&quot;%b%Y&quot;}],&quot;size&quot;:{&quot;field&quot;:&quot;percentage&quot;,&quot;legend&quot;:null,&quot;type&quot;:&quot;quantitative&quot;,&quot;scale&quot;:{&quot;zero&quot;:true,&quot;rangeMax&quot;:1000}},&quot;color&quot;:{&quot;field&quot;:&quot;Age&quot;,&quot;title&quot;:&quot;Age Group&quot;,&quot;scale&quot;:{&quot;scheme&quot;:&quot;cividis&quot;}}},&quot;mark&quot;:{&quot;type&quot;:&quot;square&quot;,&quot;line&quot;:[],&quot;fillOpacity&quot;:0.7,&quot;filled&quot;:true,&quot;interpolate&quot;:&quot;monotone&quot;}}</span></p></div><p><strong>Visualisation 4 (V4) (Interactive)</strong>: The private rent movement in England, Jan 2019 - Feb 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;height&quot;:500,&quot;width&quot;:700,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/london-private-rent-changes.csv&quot;},&quot;layer&quot;:[{&quot;data&quot;:{&quot;values&quot;:[{&quot;start&quot;:&quot;2020/03/26&quot;,&quot;end&quot;:&quot;2020/06/23&quot;,&quot;event&quot;:&quot;First Lockdown&quot;},{&quot;start&quot;:&quot;2020/10/31&quot;,&quot;end&quot;:&quot;2020/12/02&quot;,&quot;event&quot;:&quot;Second Lockdown&quot;},{&quot;start&quot;:&quot;2021/01/06&quot;,&quot;end&quot;:&quot;2021/03/31&quot;,&quot;event&quot;:&quot;Third Lockdown&quot;}]},&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;start&quot;,&quot;type&quot;:&quot;temporal&quot;},&quot;x2&quot;:{&quot;field&quot;:&quot;end&quot;,&quot;type&quot;:&quot;temporal&quot;},&quot;color&quot;:{&quot;field&quot;:&quot;event&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;domain&quot;:[&quot;First Lockdown&quot;,&quot;Second Lockdown&quot;,&quot;Third Lockdown&quot;,&quot;London&quot;,&quot;England&quot;,&quot;North East&quot;,&quot;East&quot;,&quot;North West&quot;,&quot;Yorkshire &amp; the Humber&quot;,&quot;East Midlands&quot;,&quot;West Midlands&quot;,&quot;South East&quot;,&quot;South West&quot;],&quot;range&quot;:[&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0, 100%, 85%)&quot;,&quot;hsl(0,100%,45%)&quot;,&quot;hsl(0, 0%, 0%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;,&quot;hsl(0, 0%, 75%)&quot;]}}},&quot;mark&quot;:{&quot;type&quot;:&quot;rect&quot;,&quot;opacity&quot;:0.2}},{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;month&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:false,&quot;format&quot;:&quot;%b%Y&quot;}},&quot;y&quot;:{&quot;field&quot;:&quot;percentage&quot;,&quot;type&quot;:&quot;quantitative&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:true,&quot;format&quot;:&quot;%&quot;,&quot;values&quot;:[0]}},&quot;color&quot;:{&quot;field&quot;:&quot;area&quot;},&quot;tooltip&quot;:{&quot;field&quot;:&quot;area&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;interpolate&quot;:&quot;monotone&quot;,&quot;opacity&quot;:0.4,&quot;point&quot;:true}}]}</span></p></div><p><strong>Visualisation 5 (V5) (Interactive)</strong>: The rental trend of the UK, Jan 2019 - May 2022.</p>
+<div data-role="litvisOutput" style="display: inline;"><p interactive="true" style="display: inline-block" class="vega-lite"><span style="display: none">{&quot;$schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,&quot;width&quot;:700,&quot;height&quot;:200,&quot;config&quot;:{&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;ticks&quot;:false,&quot;domain&quot;:false,&quot;labelAngle&quot;:0,&quot;labelPadding&quot;:10}},&quot;data&quot;:{&quot;url&quot;:&quot;https://kleungkc.github.io/Data/google-trend-rooms.csv&quot;},&quot;layer&quot;:[{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;format&quot;:&quot;%b%y&quot;}},&quot;y&quot;:{&quot;field&quot;:&quot;trend&quot;,&quot;type&quot;:&quot;quantitative&quot;,&quot;stack&quot;:&quot;zero&quot;,&quot;axis&quot;:{&quot;title&quot;:&quot;&quot;,&quot;grid&quot;:false}},&quot;color&quot;:{&quot;field&quot;:&quot;Flat_Type&quot;,&quot;title&quot;:&quot;&quot;,&quot;scale&quot;:{&quot;scheme&quot;:&quot;plasma&quot;}}},&quot;layer&quot;:[{&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;interpolate&quot;:&quot;monotone&quot;}},{&quot;params&quot;:[{&quot;name&quot;:&quot;myScroll&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;interval&quot;,&quot;encodings&quot;:[&quot;x&quot;]},&quot;bind&quot;:&quot;scales&quot;},{&quot;name&quot;:&quot;label&quot;,&quot;select&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;nearest&quot;:true,&quot;on&quot;:&quot;mouseover&quot;,&quot;encodings&quot;:[&quot;x&quot;]}}],&quot;encoding&quot;:{&quot;opacity&quot;:{&quot;condition&quot;:{&quot;param&quot;:&quot;label&quot;,&quot;empty&quot;:false,&quot;value&quot;:1},&quot;value&quot;:0}},&quot;mark&quot;:{&quot;type&quot;:&quot;point&quot;,&quot;filled&quot;:true}}]},{&quot;transform&quot;:[{&quot;filter&quot;:{&quot;param&quot;:&quot;label&quot;,&quot;empty&quot;:false}}],&quot;layer&quot;:[{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;rule&quot;,&quot;color&quot;:&quot;grey&quot;}},{&quot;encoding&quot;:{&quot;x&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;title&quot;:&quot;&quot;},&quot;y&quot;:{&quot;field&quot;:&quot;trend&quot;,&quot;type&quot;:&quot;quantitative&quot;},&quot;text&quot;:{&quot;field&quot;:&quot;Week&quot;,&quot;type&quot;:&quot;temporal&quot;,&quot;format&quot;:&quot;%b%y&quot;},&quot;color&quot;:{&quot;field&quot;:&quot;Flat_Type&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;align&quot;:&quot;left&quot;,&quot;dx&quot;:5,&quot;dy&quot;:-5}}]}]}</span></p></div>
       </div>
       
       
