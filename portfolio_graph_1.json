@@ -1,0 +1,73 @@
+---
+id: litvis
+
+elm:
+  dependencies:
+    gicentre/elm-vegalite: latest
+    gicentre/tidy: latest
+---
+@import "../../lectures/css/datavis.less"
+
+```elm {l=hidden}
+import Tidy exposing (..)
+import VegaLite exposing (..)
+```
+
+```elm {l=hidden v interactive}
+londonrestriction : Spec
+londonrestriction =
+    let
+        data =
+            dataFromUrl "https://kleungkc.github.io/Data/restrictions_weekly.csv" []
+        
+        ps =
+            params
+                << param "myPaintbrush" [ paSelect sePoint [ seOn "mouseover", seNearest False ] ]
+
+        cfg =
+            configure
+                << configuration (coView [ vicoStroke Nothing ])
+                << configuration
+                    (coAxis
+                        [ axcoTicks False
+                        , axcoDomain False
+                        , axcoLabelAngle 0
+                        , axcoLabelPadding 10
+                        ]
+                    )
+        enc =
+            encoding
+                << position X 
+                    [ pName "week_start"
+                    ,pTemporal
+                    ,pAxis [ axTitle ""
+                    ,axFormat "%b%y"
+                    ,axGrid True ]
+                     ]
+                << position Y
+                    [ pName "restrictions"
+                    , pNominal
+                    , pAxis []
+                    ]
+                << tooltip [ tName "restrictions"]
+                << fillOpacity
+                    [ mCondition (prParamEmpty "myPaintbrush")
+                        [ mNum 1 ]
+                        [ mNum 0.75 ]
+                    ]
+                << color
+                    [ mName "restrictions"
+                , mLegend []
+                , mScale [ scScheme "warmgreys" []]
+                , mCondition (prParamEmpty "myPaintbrush")
+                        [ mStr "rgb(230,110,90)" ]
+                        [ mStr "rgb(80,80,80)" ]
+                    ]
+                << size
+                    [ mCondition (prParamEmpty "myPaintbrush")
+                        [ mNum 600 ]
+                        [ mNum 250 ]
+                    ]
+    in
+    toVegaLite [ height 400, width 700, cfg [], data, ps[], enc [], point [maFilled True] ]
+```
